@@ -1,0 +1,46 @@
+<idea-plugin>
+  <id>YApiSyncPlugin</id>
+  <name>YApiSyncPlugin</name>
+  <version>1.7.9.6</version>
+  <vendor email="mu_ran@yahoo.com" url="http://ridup.cn">ridup.cn</vendor>
+
+  <description><![CDATA[
+      upload api to yapi<br>
+      <em>support dubbo api and api upload</em>
+    ]]></description>
+
+  <change-notes><![CDATA[
+     <p>
+     - 修复路径中包含常量所导致的异常情况<br>
+     - 增加对模块路径的个性化中文名称匹配<br>
+     - 对枚举等对象进行格式化展示<br>
+     - 增加对Interface-Component-Service类型接口的支持（business-center）
+     </p><br>
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="145.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+    <action id="YApiSyncPlugin" class="com.ridup.interaction.YApiSyncPlugin" text="YApiSyncPlugin"
+            description="YApiSyncPlugin">
+      <add-to-group group-id="EditorLangPopupMenu" anchor="first"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="alt u"/>
+    </action>
+  </actions>
+
+  <depends>com.intellij.modules.java</depends>
+
+</idea-plugin>
