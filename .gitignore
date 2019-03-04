@@ -23,9 +23,6 @@ local.properties
 # Windows thumbnail db
 Thumbs.db
 
-# OSX files
-.DS_Store
-
 # Eclipse project files
 .classpath
 .project
@@ -45,4 +42,4 @@ target/
 log
 
 out/
-.idea
+*.sh
